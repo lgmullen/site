@@ -1,2 +1,26 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<script>
+	import Header from '../components/Header.svelte';
+	import About from '../components/Pages/About.svelte';
+	import Experience from '../components/Pages/Experience.svelte';
+	import Work from '../components/Pages/Work.svelte';
+	import Contact from '../components/Pages/Contact.svelte';
+</script>
+
+<Header />
+<div id="articles">
+	<About />
+	<Experience />
+	<Work />
+	<Contact />
+</div>
+
+<!-- svelte-ignore missing-declaration -->
+
+<style>
+	#articles {
+		font-family: Serial, Impact, 'Arial Narrow', Arial, sans-serif;
+		& h1 {
+			font-size: 5rem;
+		}
+	}
+</style>
