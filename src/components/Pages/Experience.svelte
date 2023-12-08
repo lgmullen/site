@@ -99,31 +99,6 @@
 								</p>
 							</td>
 
-							<td style="text-align: center">
-								<p>
-									<img src="images/dog.gif" width="25px" /> debut of
-									<a href="https://www.youtube.com/watch?v=_NRGcZq0Z38&amp;t=1s" target="blank"
-										>My Cursor goes to Detention</a
-									>
-									at
-									<a href="https://saras.world/scrapyardscreenings" target="_blank">Sara's World</a>
-									in NYC
-								</p>
-
-								<p>
-									<img src="gifs/ham-radio.gif" width="50px" />program design for Scrap Yard
-									Screenings, a 3-day moving image festival<br /> organized by Tomi Faison <br />
-									<a href="images/poster image3.png" target="blank">[Front]</a>
-									<a href="images/program text.png" target="blank">[Back]</a>
-								</p>
-
-								<p class="Mind">
-									<img src="images/cirwallpaper.gif" width="25px" /> I made a website for
-									<a href="http://kalliopimathios.com/" target="_blank">Kalliopi Mathios</a>. Make
-									sure to have your sound on !
-								</p>
-							</td>
-
 							<td />
 						</tr>
 					</tbody>
