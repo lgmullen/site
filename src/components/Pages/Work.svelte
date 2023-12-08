@@ -17,7 +17,6 @@
 
 <style>
 	#work {
-		width: 100vw;
 		height: 100vh;
 		background-color: #e2bfe3;
 		scroll-behavior: smooth;
