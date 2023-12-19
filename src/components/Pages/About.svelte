@@ -19,10 +19,9 @@
 
 <style>
 	#about {
-		height: calc(100vh - 100px);
 		background-color: #dc582a;
 		scroll-behavior: smooth;
 		scroll-margin-top: 100px;
-		margin-top: 100px;
+		padding: 1rem;
 	}
 </style>

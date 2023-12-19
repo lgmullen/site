@@ -32,8 +32,8 @@
  '----------------'  '----------------'  '----------------'  '----------------'  '----------------'  '----------------'                                            -->
 <Header />
 <div id="articles">
-	<About />
 	<Experience />
+	<About />
 	<Work />
 	<Contact />
 </div>
@@ -45,5 +45,7 @@
 		& h1 {
 			font-size: 5rem;
 		}
+		display: flex;
+		flex-direction: column;
 	}
 </style>

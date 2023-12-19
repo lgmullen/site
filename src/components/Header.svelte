@@ -14,7 +14,7 @@
 <div id="header" on:keydown={handleWindowKeyDown} role="presentation">
 	<spacer class="flex-grow" />
 
-	{#each ['About', 'Experience', 'Work', 'Contact'] as section, index}
+	{#each ['Experience', 'About', 'Work', 'Contact'] as section, index}
 		<a href={`#${section.toLowerCase()}`}>
 			<p class="inline">0{index + 1}.</p>
 			<p>{section}</p>
@@ -62,6 +62,7 @@
 		top: 0;
 		left: 0;
 		width: 100%;
+		z-index: 1;
 	}
 	a {
 		margin-left: 16px;
