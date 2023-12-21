@@ -1,3 +1,7 @@
+<script>
+	import { resumeUrl } from '../../helper.js';
+</script>
+
 <div class="about-page" id="contact">
 	<h1>Contact</h1>
 	<div class="item-container">
@@ -14,7 +18,7 @@
 		<button id="email">
 			<img src="/images/email_me.gif" alt="email_me" />
 		</button>
-		<a href="/resume.pdf" target="_blank"> Download Resume </a>
+		<a href={resumeUrl} target="_blank"> Download Resume </a>
 	</div>
 </div>
 
