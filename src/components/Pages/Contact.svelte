@@ -14,7 +14,7 @@
 		<button id="email">
 			<img src="/images/email_me.gif" alt="email_me" />
 		</button>
-		<a href="https://www.linkedin.com/in/lawrence-mullen/"> Download Resume </a>
+		<a href="/resume.pdf" target="_blank"> Download Resume </a>
 	</div>
 </div>
 

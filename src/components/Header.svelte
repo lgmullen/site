@@ -3,7 +3,6 @@
 	import Modal from './Modal.svelte';
 
 	let showModal: boolean = false;
-
 	function handleWindowKeyDown(event: { key: string }) {
 		if (event.key === 'Escape') {
 			showModal = false;
@@ -63,6 +62,7 @@
 		left: 0;
 		width: 100%;
 		z-index: 1;
+		font-family: Serial, Impact, 'Arial Narrow', Arial, sans-serif;
 	}
 	a {
 		margin-left: 16px;
