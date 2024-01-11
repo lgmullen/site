@@ -1,26 +1,37 @@
+<script>
+	import Project from '../Project.svelte';
+</script>
+
 <div id="work">
-	<h1>Work</h1>
-	<div class="mx-auto max-w-3xl py-16 md:py-20">
-		<h1 class="section-header">About Me</h1>
-		<div class="text-md text-off-gray">
-			<p>yooo</p>
-			<ul
-				class="font-mono text-xs xs:text-sm grid gap-2 grid-cols-3 grid-rows-2 grid-flow-col scrollreveal"
-			>
-				<li>
-					<p>xDDDDDD</p>
-				</li>
-			</ul>
+	<div>
+		<div class="grid-container">
+			<Project
+				title="Fairchain New York"
+				lineOne="▪ Developed a native-web MVP into a production-level quality application with ~$50,000 worth of transactions."
+				lineTwo="▪ Focused on native development in react native and Expo Go to create an app that helps
+			artists get royalties for resale."
+				tech="▪ Tech: Expo, Firebase, Tailwind, Jest, GraphQL, React, Typescript"
+			/>
+			<Project
+				title="Kohls Holiday Web Experience"
+				lineOne="▪ Collaborated with Kohl's design team to develop and code dynamic animations for the 2022 Kohl's digital holiday marketing campaign, generating engagement from 100,000+ users."
+				lineTwo="▪ Designed and implemented native sharing in React, enabling users to easily share their gift list animations with friends and family."
+				tech="▪ Tech: Expo, Firebase, Tailwind, Jest, GraphQL, React, Typescript"
+			/>
 		</div>
 	</div>
 </div>
 
 <style>
 	#work {
-		height: 100vh;
+		height: calc(100vh - 100px);
 		background-color: #e2bfe3;
 		scroll-behavior: smooth;
 		scroll-margin-top: 100px;
-		padding: 1rem;
+	}
+	.grid-container {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		justify-content: flex-start;
 	}
 </style>

@@ -96,15 +96,17 @@
 							</p>
 						</td>
 						<td style="text-align: center">
-							<p style="align-items: center">Created the Kohl's 2022 holiday animation in p5.js</p>
+							<p style="align-items: center">
+								Created the Kohl's 2022 <a
+									href="https://corporate.kohls.com/news/archive-/2023/november/kohl-s-introduces-new-interactive-experiences-for-customers-this"
+									target="blank"
+								>
+									holiday animation</a
+								>
+								in p5.js
+							</p>
 							<p>Started Billy Blanks Tae Bo journey</p>
 							<p class="Mind" />
-
-							<p>
-								Helped the <a href="https://www.ukrainiansportsclubny.com/" target="blank"
-									>NYC Ukrainian soccer team</a
-								> get promoted to division 1 of the Cosmopolitan Soccer League
-							</p>
 						</td>
 
 						<td />
@@ -119,12 +121,16 @@
 						color3="#efefef"
 					/>
 					<td style="text-align: center; background-color:{grey};">
-						<p>Started job at Theodo nyc</p>
-						<p>worked on black mafia family</p>
 						<p>
-							Helped the <a href="https://www.ukrainiansportsclubny.com/" target="blank"
-								>NYC Ukrainian soccer team</a
-							> get promoted to division 1 of the Cosmopolitan Soccer League
+							Started job at <a href="https://www.theodo.com/" target="_blank"> Theodo NYC</a>
+						</p>
+
+						<p>
+							worked on <a
+								href="https://variety.com/2021/tv/reviews/bmf-review-starz-50-cent-black-mafia-family-1235075541/"
+								target="blank">Black Mafia Family</a
+							>
+							tv show as a film PA!
 						</p>
 					</td>
 					<td style="background-color:{grey}" />
