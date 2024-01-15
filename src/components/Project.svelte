@@ -30,18 +30,24 @@
 		justify-content: space-around;
 		align-items: center;
 		border: 2px solid purple;
+		border-radius: 8px;
 		font-size: 30px;
 		margin: 1rem;
 		min-height: 300px;
 		padding: 0px 12px 0px 12px;
 		position: relative;
 		text-align: center;
+		cursor: pointer;
+
+		&:hover {
+			box-shadow: 0 0 10px blue;
+		}
 	}
 	.image-container {
 		top: 0;
 		left: 0;
 		width: 100%;
-		height: 50%;
+		height: 40%;
 		position: absolute;
 	}
 	.img-fill {
