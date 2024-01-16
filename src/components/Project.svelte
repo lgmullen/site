@@ -3,24 +3,27 @@
 	export let lineOne: String | undefined;
 	export let lineTwo: String | undefined;
 	export let tech: String | undefined;
+	export let projectUrl: string | null | undefined = null;
 </script>
 
 <div class="grid-item">
-	<div class="image-container">
-		<div class="img-fill" />
-	</div>
-	<p>{title}</p>
-	<div style="text-align: start; margin-top: 12px;">
-		<p style="font-size: 12px">
-			{lineOne}
-		</p>
-		<p style="font-size: 12px">
-			{lineTwo}
-		</p>
-		<p style="font-size: 12px">
-			{tech}
-		</p>
-	</div>
+	<a href={projectUrl} target="_blank">
+		<div class="image-container">
+			<div class="img-fill" />
+		</div>
+		<p>{title}</p>
+		<div style="text-align: start; margin-top: 12px;">
+			<p style="font-size: 12px">
+				{lineOne}
+			</p>
+			<p style="font-size: 12px">
+				{lineTwo}
+			</p>
+			<p style="font-size: 12px">
+				{tech}
+			</p>
+		</div>
+	</a>
 </div>
 
 <style>

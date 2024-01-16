@@ -18,6 +18,13 @@
 				lineTwo="▪ Designed and implemented native sharing in React, enabling users to easily share their gift list animations with friends and family."
 				tech="▪ Tech: Expo, Firebase, Tailwind, Jest, GraphQL, React, Typescript"
 			/>
+			<Project
+				projectUrl="https://lgmullen.github.io/tide-pool/"
+				title="Tide Pool Table"
+				lineOne="▪ Simple react app to display ocean survey data."
+				lineTwo="▪ Uses Mapbox GL to help user visualize ocean exploration information."
+				tech="▪ Tech: React, Mui, React Query"
+			/>
 		</div>
 	</div>
 </div>
