@@ -1,37 +1,37 @@
 <script lang="ts">
-	export let title: String | undefined;
-	export let lineOne: String | undefined;
-	export let lineTwo: String | undefined;
-	export let tech: String | undefined;
+	export let title: string | undefined;
+	export let lineOne: string | undefined;
+	export let lineTwo: string | undefined;
+	export let tech: string | undefined;
 	export let projectUrl: string | null | undefined = null;
+	export let imageSrc: string | undefined = undefined;
 </script>
 
-<div class="grid-item">
-	<a href={projectUrl} target="_blank">
-		<div class="image-container">
-			<div class="img-fill" />
-		</div>
-		<p>{title}</p>
-		<div style="text-align: start; margin-top: 12px;">
-			<p style="font-size: 12px">
-				{lineOne}
-			</p>
-			<p style="font-size: 12px">
-				{lineTwo}
-			</p>
-			<p style="font-size: 12px">
-				{tech}
-			</p>
-		</div>
-	</a>
-</div>
+<a href={projectUrl} target="_blank" class="grid-item">
+	<div class="image-container" style="background-image: url({imageSrc});">
+		<div class="img-fill" />
+	</div>
+	<div style="height: 40%; margin: 0; text-align: center">
+		<p class="title">{title}</p>
+	</div>
+	<div style="text-align: start; height: 60%;">
+		<p style="font-size: 12px">
+			{lineOne}
+		</p>
+		<p style="font-size: 12px">
+			{lineTwo}
+		</p>
+		<p style="font-size: 12px;">
+			{tech}
+		</p>
+	</div>
+</a>
 
 <style>
 	.grid-item {
+		z-index: 0;
 		display: flex;
 		flex-direction: column;
-		justify-content: space-around;
-		align-items: center;
 		border: 2px solid purple;
 		border-radius: 8px;
 		font-size: 30px;
@@ -47,16 +47,27 @@
 		}
 	}
 	.image-container {
+		border-radius: 6px;
+		z-index: -1;
+		background-size: 100%;
 		top: 0;
 		left: 0;
 		width: 100%;
 		height: 40%;
 		position: absolute;
+
+		background-size: auto 100%;
+		background-repeat: no-repeat;
+		background-position: center center;
 	}
 	.img-fill {
 		opacity: 0.2;
 		background-color: blueviolet;
 		height: 100%;
 		width: 100%;
+	}
+
+	.grid-item:hover .title {
+		color: mediumorchid;
 	}
 </style>

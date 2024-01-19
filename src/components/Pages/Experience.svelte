@@ -107,6 +107,14 @@
 							</p>
 							<p>Started Billy Blanks Tae Bo journey</p>
 							<p class="Mind" />
+							<p>
+								Check out my article on <a
+									href="https://blog.theodo.com/2023/03/saving-canvas-animations/"
+									target="_blank"
+								>
+									saving canvas animations!
+								</a>
+							</p>
 						</td>
 
 						<td />
