@@ -12,9 +12,8 @@
 
 <div id="header" on:keydown={handleWindowKeyDown} role="presentation">
 	<spacer class="flex-grow" />
-
 	{#each ['Experience', 'About', 'Work', 'Contact'] as section, index}
-		<a href={`#${section.toLowerCase()}`}>
+		<a href={`#${section.toLowerCase()}`} class="header-item">
 			<p class="inline">0{index + 1}.</p>
 			<p>{section}</p>
 		</a>
@@ -71,5 +70,14 @@
 	}
 	button {
 		display: hidden;
+	}
+
+	@media only screen and (max-width: 768px) {
+		.header-item {
+			display: none;
+		}
+		#header {
+			width: 100dvw;
+		}
 	}
 </style>

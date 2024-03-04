@@ -29,8 +29,9 @@
 | |              | || |              | || |              | || |              | || |              | || |              | |                                          
 | '--------------' || '--------------' || '--------------' || '--------------' || '--------------' || '--------------' |                                          
  '----------------'  '----------------'  '----------------'  '----------------'  '----------------'  '----------------'                                            -->
-<Header />
 <div id="articles">
+	<Header />
+
 	<Experience />
 	<About />
 	<Work />
@@ -39,11 +40,8 @@
 
 <style>
 	#articles {
-		width: 100%;
+		width: 100dvw;
 		font-family: Serial, Impact, 'Arial Narrow', Arial, sans-serif;
-		& h1 {
-			font-size: 5rem;
-		}
 		display: flex;
 		flex-direction: column;
 	}

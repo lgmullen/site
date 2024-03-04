@@ -29,12 +29,12 @@
 		border="1"
 		cellpadding="0"
 		cellspacing="5"
-		style="height:100px;width:80%"
+		style="height:100px;width:95%"
 		class="center"
 	>
 		<td style="background-color:{beach}; text-align: center">
 			<p id="metal">★·.·´¯`·.·★ 🎀 𝓁𝒶𝓌𝓇𝑒𝓃𝒸𝑒 𝓂𝓊𝓁𝓁𝑒𝓃 🎀 ★·.·`¯´·.·★</p>
-			<table align="center" border="1" cellpadding="1" cellspacing="1" width="750">
+			<table align="center" border="1" cellpadding="1" cellspacing="1" width="90%">
 				<tbody style="text-align: center;">
 					<tr>
 						<td> ★○★○★○★ </td>
@@ -99,24 +99,23 @@
 							<p style="align-items: center">
 								Created the Kohl's 2022 <a
 									href="https://corporate.kohls.com/news/archive-/2023/november/kohl-s-introduces-new-interactive-experiences-for-customers-this"
-									target="blank"
-								>
-									holiday animation</a
-								>
-								in p5.js
+									target="blank">holiday animation</a
+								>in p5.js
 							</p>
-							<p>Started Billy Blanks Tae Bo journey</p>
+							<p>
+								Started Billy Blanks <a
+									href="https://www.youtube.com/watch?v=s1t4xIlsmH0"
+									target="_blank">Tae Bo</a
+								>journey
+							</p>
 							<p class="Mind" />
 							<p>
 								Check out my article on <a
 									href="https://blog.theodo.com/2023/03/saving-canvas-animations/"
-									target="_blank"
+									target="_blank">saving canvas animations!</a
 								>
-									saving canvas animations!
-								</a>
 							</p>
 						</td>
-
 						<td />
 					</tr>
 					<!-- 2021  -->

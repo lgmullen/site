@@ -47,4 +47,9 @@
 	#email:hover {
 		background-color: orangered;
 	}
+	@media only screen and (max-width: 768px) {
+		.item-container {
+			flex-direction: column;
+		}
+	}
 </style>
