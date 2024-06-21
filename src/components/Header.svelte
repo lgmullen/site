@@ -1,4 +1,5 @@
 <script lang="ts">
+	import HeaderButton from './HeaderButton.svelte';
 	import Icon from './Icon.svelte';
 	import Modal from './Modal.svelte';
 
@@ -13,10 +14,11 @@
 <div id="header" on:keydown={handleWindowKeyDown} role="presentation">
 	<spacer class="flex-grow" />
 	{#each ['Experience', 'About', 'Work', 'Contact'] as section, index}
-		<a href={`#${section.toLowerCase()}`} class="header-item">
+		<!-- <a href={`#${section.toLowerCase()}`} class="header-item">
 			<p class="inline">0{index + 1}.</p>
 			<p>{section}</p>
-		</a>
+		</a> -->
+		<HeaderButton {section} {index} />
 	{/each}
 
 	<spacer />
@@ -46,11 +48,7 @@
 		margin-left: auto;
 		padding: 12px;
 	}
-	p {
-		color: rgb(245, 234, 204);
-		font-family: Serial, Impact, 'Arial Narrow', Arial, sans-serif;
-		font-size: 2em;
-	}
+
 	#header {
 		background-color: #000;
 		display: flex;
