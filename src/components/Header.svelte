@@ -12,7 +12,7 @@
 </script>
 
 <div id="header" on:keydown={handleWindowKeyDown} role="presentation">
-	<spacer class="flex-grow" />
+	<spacer />
 	{#each ['Experience', 'About', 'Work', 'Contact'] as section, index}
 		<!-- <a href={`#${section.toLowerCase()}`} class="header-item">
 			<p class="inline">0{index + 1}.</p>
@@ -20,7 +20,6 @@
 		</a> -->
 		<HeaderButton {section} {index} />
 	{/each}
-
 	<spacer />
 	<div id="hamburger">
 		<button id="hamburger-button" aria-label="open menu" on:click={() => (showModal = true)}>

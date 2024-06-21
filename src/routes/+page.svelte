@@ -4,6 +4,8 @@
 	import Experience from '../components/Pages/Experience.svelte';
 	import Work from '../components/Pages/Work.svelte';
 	import Contact from '../components/Pages/Contact.svelte';
+
+	import '../app.css';
 </script>
 
 <!-- .----------------.  .----------------.  .----------------.  .----------------.  .----------------.  .-----------------. .----------------.  .----------------.   
