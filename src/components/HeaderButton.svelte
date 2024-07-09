@@ -1,10 +1,11 @@
 <script lang="ts">
 	export let section: string;
 	export let index: number;
+	export let visible: boolean;
 </script>
 
 <div>
-	<a href={`#${section.toLowerCase()}`} class="header-item">
+	<a href={`#${section.toLowerCase()}`} class="header-item" on:click={() => (visible = false)}>
 		<p class="inline">0{index + 1}.</p>
 		<p>{section}</p>
 	</a>
