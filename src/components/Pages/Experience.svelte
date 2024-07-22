@@ -41,6 +41,44 @@
 						<td> (っ◔◡◔)っ ♥ about page ♥ </td>
 						<td> ★○★○★○★</td>
 					</tr>
+					<!-- 2024 accomplishments -->
+					<tr style="border: 1px dashed grey">
+						<Year
+							bg_color="rgb(31,242,24)"
+							text="2024"
+							color0="#F9FAF9"
+							color1="#b5a8a5"
+							color2="#ffd2c6"
+							color3="#efefef"
+						/>
+
+						<td style="display: flex; flex-direction: column; align-items: center">
+							<p style="align-items: center">Created freelance websites</p>
+							<p>
+								Operating guest services at the
+								<a href="https://breakfaststudio.com/" target="blank">Knockdown Center</a>
+							</p>
+							<p>Got my ham radio technicians operators license</p>
+							<p>
+								Got a nice highlight for <a
+									href="https://www.ukrainiansportsclubny.com/"
+									target="blank">New York Ukrainians</a
+								>
+							</p>
+							<br />
+							<p>Appearences:</p>
+							<ul style=" columns: 2; -webkit-columns: 2; -moz-columns: 2;">
+								<li>Only Murders in the Building</li>
+								<li>You</li>
+								<li>Sex & The City</li>
+								<li>{`Bob Dylan movie (upcoming)`}</li>
+								<li>Power Book III</li>
+								<li>Goosebumps</li>
+								<li>{`Spike Lee (upcoming)`}</li>
+							</ul>
+						</td>
+						<td />
+					</tr>
 					<!-- 2023 accomplishments -->
 					<tr style="background-color:{grey};">
 						<Year
@@ -54,7 +92,12 @@
 
 						<td style="text-align: center">
 							<p style="align-items: center">
-								<img src="gifs/sculpture.gif" height="65px" alt="sculpture" />
+								<img
+									src="gifs/sculpture.gif"
+									height="65px"
+									alt="sculpture"
+									style="display: inline; border-width: 0px;"
+								/>
 								Production technician at
 								<a href="https://breakfaststudio.com/" target="blank">BREAKFAST studios</a>
 								a kinetic sculpture studio in nyc
@@ -65,7 +108,12 @@
 							</p>
 							<p class="Mind">
 								Got my ham radio technicians operators license
-								<img src="gifs/ham-radio.gif" width="25px" alt="radio" />
+								<img
+									src="gifs/ham-radio.gif"
+									width="25px"
+									alt="radio"
+									style="display: inline; border-width: 0px;"
+								/>
 							</p>
 							<p>
 								Helped the <a href="https://www.ukrainiansportsclubny.com/" target="blank"
@@ -161,5 +209,11 @@
 	a {
 		color: purple;
 		text-decoration: underline;
+	}
+	li {
+		list-style-type: disc;
+
+		padding: 4px;
+		text-align: start;
 	}
 </style>

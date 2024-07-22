@@ -11,6 +11,8 @@
 	let scrollY = 0;
 	let posY = 0;
 
+	let displayInvertedCursor = true;
+
 	/**
 	 * @param {{ clientX: number; clientY: number; }} event
 	 */
@@ -30,10 +32,11 @@
 <!-- svelte-ignore a11y-no-static-element-interactions -->
 <svelte:window on:mousemove={handleMousemove} on:scroll={handleScroll} />
 <div id="articles">
-	<div style="--mouseX:{mouseX}; --posY:{posY}" id="invertedcursor" />
-
+	{#if displayInvertedCursor == true}
+		<div style="--mouseX:{mouseX}; --posY:{posY}" id="invertedcursor" />
+	{/if}
 	<!-- svelte-ignore a11y-no-static-element-interactions -->
-	<Header />
+	<Header bind:displayInvertedCursor />
 	<Experience />
 	<About />
 	<Work />
