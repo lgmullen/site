@@ -35,8 +35,9 @@
 		<!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
 		<!-- svelte-ignore a11y-click-events-have-key-events -->
 		<div class="flex flex-row align-center ml-auto items-center mr-3">
-			<label class="text-white" for="cheese">toggle mouse</label>
+			<label for="checkbox" class="text-white mr-1">toggle <br /> mouse</label>
 			<input
+				name="checkbox"
 				type="checkbox"
 				class="toggle mr-2"
 				on:click={() => (displayInvertedCursor = !displayInvertedCursor)}
@@ -67,12 +68,16 @@
 	</div>
 	{#if visible}
 		<div class="flex flex-row justify-center border-orange-500 border-2 w-full h-[22rem]">
-			<div class="flex flex-col justify-center align-middle">
+			<div class="flex flex-col justify-center items-middle text-orange-500">
 				<a
+					class="ml-0"
 					href="https://drive.google.com/file/d/18fW0hFdJ_dZy89hixKhNqxn4Wzh5lsGu/view?usp=sharing"
 					target="_blank"
 					id="resume-button">Download Resume</a
 				>
+				<h1>lawrence mullen</h1>
+				<h1>contact: lgmullen97@gmail.com</h1>
+				<h1>New York City</h1>
 			</div>
 		</div>
 	{/if}
@@ -91,11 +96,7 @@
 		z-index: 1;
 		font-family: Serial, Impact, 'Arial Narrow', Arial, sans-serif;
 	}
-	a {
-		margin-left: 16px;
-		padding: 4;
-		display: flex;
-	}
+
 	button {
 		display: hidden;
 	}
