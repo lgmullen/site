@@ -31,17 +31,17 @@
 			}
 		}
 
-		const endpoint = 'http://localhost:3000/counter';
-		const response = await fetch(endpoint, {
-			headers: {
-				'Content-Type': 'application/json',
-				session: session
-			}
-		});
-		const data = await response.json();
-		// TODO add typing here
-		// @ts-ignore
-		number_visted = data.hits;
+		// const endpoint = 'http://localhost:3000/counter';
+		// const response = await fetch(endpoint, {
+		// 	headers: {
+		// 		'Content-Type': 'application/json',
+		// 		session: session
+		// 	}
+		// });
+		// const data = await response.json();
+		// // TODO add typing here
+		// // @ts-ignore
+		// number_visted = data.hits;
 	});
 </script>
 

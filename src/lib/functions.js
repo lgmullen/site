@@ -1,8 +1,7 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 // @ts-nocheck
 
-import pkg from 'uuid';
-const { v4 } = pkg;
+import { v4 as uuidV4 } from 'uuid';
 
 export function tester() {
 	console.log('helloworld');
@@ -24,6 +23,6 @@ export function getSession() {
 	return session;
 }
 export function createSession() {
-	const uuid = v4();
-	return uuid;
+	const newId = uuidV4();
+	return newId;
 }
