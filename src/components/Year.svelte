@@ -11,7 +11,7 @@
 	const digit3 = text[3];
 </script>
 
-<td style="text-align: center; background-color:{bg_color};">
+<td class="banner" style="text-align: center; background-color:{bg_color};">
 	<p><span style="font-size:16px;"><span style="color:{color0};">{digit0}</span></span></p>
 	<p><span style="font-size:16px;"><span style="color:{color1};">{digit1}</span></span></p>
 	<p><span style="font-size:16px;"><span style="color:{color2};">{digit2}</span></span></p>

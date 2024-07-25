@@ -24,24 +24,27 @@
 	on:keydown={handleWindowKeyDown}
 	role="presentation"
 >
-	<div class="flex flex-row fixed top-0 left-0 w-full">
+	<div class="flex flex-row fixed top-0 left-0 w-full items-center h-24">
 		<spacer />
-
-		{#each ['Experience', 'About', 'Work', 'Contact'] as section, index}
-			<HeaderButton {section} {index} bind:visible />
-		{/each}
+		<div class="flex flex-row fixed top-0 left-0" id="nav-options">
+			{#each ['Experience', 'About', 'Work', 'Contact'] as section, index}
+				<HeaderButton {section} {index} bind:visible />
+			{/each}
+		</div>
 
 		<spacer />
 		<!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
 		<!-- svelte-ignore a11y-click-events-have-key-events -->
 		<div class="flex flex-row align-center ml-auto items-center mr-3">
-			<label for="checkbox" class="text-white mr-1">toggle <br /> mouse</label>
-			<input
-				name="checkbox"
-				type="checkbox"
-				class="toggle mr-2"
-				on:click={() => (displayInvertedCursor = !displayInvertedCursor)}
-			/>
+			<div id="mouse-toggle">
+				<label for="checkbox" class="text-white mr-1">toggle <br /> mouse</label>
+				<input
+					name="checkbox"
+					type="checkbox"
+					class="toggle mr-2"
+					on:click={() => (displayInvertedCursor = !displayInvertedCursor)}
+				/>
+			</div>
 			<label class="btn btn-circle swap swap-rotate ml-auto" aria-label="open menu">
 				<input class="fill-black-700" type="checkbox" on:click={() => (visible = !visible)} />
 				<svg
@@ -111,11 +114,18 @@
 	}
 
 	@media only screen and (max-width: 768px) {
+		#nav-options {
+			display: none;
+		}
+		#mouse-toggle {
+			display: none;
+		}
 		.header-item {
 			display: none;
 		}
 		#header {
 			width: 100dvw;
+			overflow: hidden;
 		}
 	}
 </style>

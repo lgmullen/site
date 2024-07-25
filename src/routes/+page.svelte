@@ -64,4 +64,9 @@
 		mix-blend-mode: difference;
 		transition: transform 0.9s;
 	}
+	@media only screen and (max-width: 768px) {
+		#invertedcursor {
+			display: none;
+		}
+	}
 </style>

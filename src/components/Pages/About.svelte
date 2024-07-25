@@ -1,6 +1,6 @@
 <div class="about-page" id="about">
 	<h1 class="section-header">About Me</h1>
-	<div class="text-md text-off-gray about-info">
+	<div class="text-md about-info">
 		<p>
 			NYC based full stack software engineer with 2.5 years of professional experience seeking
 			full-time employment. Exceptionally motivated to learn and master new technologies while
