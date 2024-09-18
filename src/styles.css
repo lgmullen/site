@@ -1,0 +1,19 @@
+.retro-btn {
+	background-color: rgb(230, 230, 230);
+	display: inline-block;
+	padding: 4px 12px;
+	margin-bottom: 0;
+	font-size: 16px;
+	line-height: 20px;
+	color: #333;
+	text-align: center;
+	text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+	vertical-align: middle;
+	cursor: pointer;
+	text-decoration: underline;
+	border-bottom-style: ridge;
+	font-family: 'Comic Sans', 'Comic Sans MS';
+	border-radius: 0px;
+	background-image: linear-gradient(to bottom, #e6e6e6, #e6e6e6);
+	border: 4px ridge #bbb;
+}

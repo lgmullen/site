@@ -2,6 +2,7 @@
 	import { quintOut } from 'svelte/easing';
 	import { tweened } from 'svelte/motion';
 	import HeaderButton from './HeaderButton.svelte';
+	import '../styles.css';
 
 	export let displayInvertedCursor: boolean;
 
