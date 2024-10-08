@@ -81,7 +81,7 @@
 						color3="#efefef"
 					/>
 					<td style="display: flex; flex-direction: column; align-items: center">
-						<p style="align-items: center">Created freelance websites</p>
+						<p style="align-items: center">Doing freelance web development! Hit me up!</p>
 						<p>
 							Operating guest services at the
 							<a href="https://breakfaststudio.com/" target="blank">Knockdown Center</a>
@@ -103,6 +103,8 @@
 							<li>Power Book III</li>
 							<li>Goosebumps</li>
 							<li>{`Spike Lee (upcoming)`}</li>
+							<li>Étoile</li>
+							<li>Black Rabbit</li>
 						</ul>
 					</td>
 					<td />
@@ -231,6 +233,7 @@
 		margin-top: 100px;
 		padding: 1rem;
 		font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+		min-height: calc(100vh);
 	}
 	a {
 		color: purple;

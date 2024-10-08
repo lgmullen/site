@@ -1,0 +1,962 @@
+.contactStyle {
+	/* Color */
+	--text-color: #222222;
+	--surface: #c0c0c0;
+	--button-highlight: #ffffff;
+	--button-face: #dfdfdf;
+	--button-shadow: #808080;
+	--window-frame: #0a0a0a;
+	--dialog-blue: #000080;
+	--dialog-blue-light: #1084d0;
+	--dialog-gray: #808080;
+	--dialog-gray-light: #b5b5b5;
+	--link-blue: #0000ff;
+
+	/* Spacing */
+	--element-spacing: 8px;
+	--grouped-button-spacing: 4px;
+	--grouped-element-spacing: 6px;
+	--radio-width: 12px;
+	--checkbox-width: 13px;
+	--radio-label-spacing: 6px;
+	--range-track-height: 4px;
+	--range-spacing: 10px;
+
+	/* Some detailed computations for radio buttons and checkboxes */
+	--radio-total-width-precalc: var(--radio-width) + var(--radio-label-spacing);
+	--radio-total-width: calc(var(--radio-total-width-precalc));
+	--radio-left: calc(-1 * var(--radio-total-width-precalc));
+	--radio-dot-width: 4px;
+	--radio-dot-top: calc(var(--radio-width) / 2 - var(--radio-dot-width) / 2);
+	--radio-dot-left: calc(
+		-1 * (var(--radio-total-width-precalc)) + var(--radio-width) / 2 - var(--radio-dot-width) / 2
+	);
+
+	--checkbox-total-width-precalc: var(--checkbox-width) + var(--radio-label-spacing);
+	--checkbox-total-width: calc(var(--checkbox-total-width-precalc));
+	--checkbox-left: calc(-1 * var(--checkbox-total-width-precalc));
+	--checkmark-width: 7px;
+	--checkmark-left: 3px;
+
+	/* Borders */
+	--border-width: 1px;
+	--border-raised-outer: inset -1px -1px var(--window-frame), inset 1px 1px var(--button-highlight);
+	--border-raised-inner: inset -2px -2px var(--button-shadow), inset 2px 2px var(--button-face);
+	--border-sunken-outer: inset -1px -1px var(--button-highlight), inset 1px 1px var(--window-frame);
+	--border-sunken-inner: inset -2px -2px var(--button-face), inset 2px 2px var(--button-shadow);
+	--default-button-border-raised-outer: inset -2px -2px var(--window-frame),
+		inset 1px 1px var(--window-frame);
+	--default-button-border-raised-inner: inset 2px 2px var(--button-highlight),
+		inset -3px -3px var(--button-shadow), inset 3px 3px var(--button-face);
+	--default-button-border-sunken-outer: inset 2px 2px var(--window-frame),
+		inset -1px -1px var(--window-frame);
+	--default-button-border-sunken-inner: inset -2px -2px var(--button-highlight),
+		inset 3px 3px var(--button-shadow), inset -3px -3px var(--button-face);
+
+	/* Window borders flip button-face and button-highlight */
+	--border-window-outer: inset -1px -1px var(--window-frame), inset 1px 1px var(--button-face);
+	--border-window-inner: inset -2px -2px var(--button-shadow), inset 2px 2px var(--button-highlight);
+
+	/* Field borders (checkbox, input, etc) flip window-frame and button-shadow */
+	--border-field: inset -1px -1px var(--button-highlight), inset 1px 1px var(--button-shadow),
+		inset -2px -2px var(--button-face), inset 2px 2px var(--window-frame);
+
+	/* Tabs */
+	--border-tab: inset -1px 0 var(--window-frame), inset 1px 1px var(--button-face),
+		inset -2px 0 var(--button-shadow), inset 2px 2px var(--button-highlight);
+}
+
+/* @font-face rules remain global and cannot be scoped */
+@font-face {
+	font-family: 'Pixelated MS Sans Serif';
+	src: url('fonts/converted/ms_sans_serif.woff') format('woff');
+	src: url('fonts/converted/ms_sans_serif.woff2') format('woff2');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Pixelated MS Sans Serif';
+	src: url('fonts/converted/ms_sans_serif_bold.woff') format('woff');
+	src: url('fonts/converted/ms_sans_serif_bold.woff2') format('woff2');
+	font-weight: bold;
+	font-style: normal;
+}
+
+/* All other selectors are scoped under .contactStyle */
+
+.contactStyle body {
+	font-family: Arial;
+	font-size: 12px;
+	color: var(--text-color);
+}
+
+.contactStyle button,
+.contactStyle label,
+.contactStyle input,
+.contactStyle legend,
+.contactStyle textarea,
+.contactStyle select,
+.contactStyle option,
+.contactStyle table,
+.contactStyle ul.tree-view,
+.contactStyle .window,
+.contactStyle .title-bar,
+.contactStyle li[role='tab'] {
+	font-family: 'Pixelated MS Sans Serif', Arial;
+	-webkit-font-smoothing: none;
+	font-size: 11px;
+}
+
+.contactStyle h1 {
+	font-size: 5rem;
+}
+
+.contactStyle h2 {
+	font-size: 2.5rem;
+}
+
+.contactStyle h3 {
+	font-size: 2rem;
+}
+
+.contactStyle h4 {
+	font-size: 1.5rem;
+}
+
+.contactStyle u {
+	text-decoration: none;
+	border-bottom: 0.5px solid #222222;
+}
+
+.contactStyle button,
+.contactStyle input[type='submit'],
+.contactStyle input[type='reset'] {
+	box-sizing: border-box;
+	border: none;
+	color: transparent;
+	text-shadow: 0 0 var(--text-color);
+	background: var(--surface);
+	box-shadow: var(--border-raised-outer), var(--border-raised-inner);
+	border-radius: 0;
+	min-width: 75px;
+	min-height: 23px;
+	padding: 0 12px;
+}
+
+.contactStyle button.default,
+.contactStyle input[type='submit'].default,
+.contactStyle input[type='reset'].default {
+	box-shadow: var(--default-button-border-raised-outer), var(--default-button-border-raised-inner);
+}
+
+.contactStyle .vertical-bar {
+	width: 4px;
+	height: 20px;
+	background: #c0c0c0;
+	box-shadow: var(--border-raised-outer), var(--border-raised-inner);
+}
+
+.contactStyle button:not(:disabled):active,
+.contactStyle input[type='submit']:not(:disabled):active,
+.contactStyle input[type='reset']:not(:disabled):active {
+	box-shadow: var(--border-sunken-outer), var(--border-sunken-inner);
+	text-shadow: 1px 1px var(--text-color);
+}
+
+.contactStyle button.default:not(:disabled):active,
+.contactStyle input[type='submit'].default:not(:disabled):active,
+.contactStyle input[type='reset'].default:not(:disabled):active {
+	box-shadow: var(--default-button-border-sunken-outer), var(--default-button-border-sunken-inner);
+}
+
+@media (not(hover)) {
+	.contactStyle button:not(:disabled):hover,
+	.contactStyle input[type='submit']:not(:disabled):hover,
+	.contactStyle input[type='reset']:not(:disabled):hover {
+		box-shadow: var(--border-sunken-outer), var(--border-sunken-inner);
+	}
+}
+
+.contactStyle button:focus,
+.contactStyle input[type='submit']:focus,
+.contactStyle input[type='reset']:focus {
+	outline: 1px dotted #000000;
+	outline-offset: -4px;
+}
+
+.contactStyle button::-moz-focus-inner,
+.contactStyle input[type='submit']::-moz-focus-inner,
+.contactStyle input[type='reset']::-moz-focus-inner {
+	border: 0;
+}
+
+.contactStyle :disabled,
+.contactStyle :disabled + label,
+.contactStyle input[readonly],
+.contactStyle input[readonly] + label {
+	color: var(--button-shadow);
+}
+
+.contactStyle button:disabled,
+.contactStyle input[type='submit']:disabled,
+.contactStyle input[type='reset']:disabled,
+.contactStyle :disabled + label {
+	text-shadow: 1px 1px 0 var(--button-highlight);
+}
+
+.contactStyle .window {
+	box-shadow: var(--border-window-outer), var(--border-window-inner);
+	background: var(--surface);
+	padding: 3px;
+}
+
+.contactStyle .title-bar {
+	background: linear-gradient(90deg, var(--dialog-blue), var(--dialog-blue-light));
+	padding: 3px 2px 3px 3px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.contactStyle .title-bar.inactive {
+	background: linear-gradient(90deg, var(--dialog-gray), var(--dialog-gray-light));
+}
+
+.contactStyle .title-bar-text {
+	font-weight: bold;
+	color: white;
+	letter-spacing: 0;
+	margin-right: 24px;
+}
+
+.contactStyle .title-bar-controls {
+	display: flex;
+}
+
+.contactStyle .title-bar-controls button {
+	padding: 0;
+	display: block;
+	min-width: 16px;
+	min-height: 14px;
+}
+
+.contactStyle .title-bar-controls button:active {
+	padding: 0;
+}
+
+.contactStyle .title-bar-controls button:focus {
+	outline: none;
+}
+
+.contactStyle .title-bar-controls button[aria-label='Minimize'],
+.contactStyle .title-bar-controls button[aria-label].minimize {
+	background-image: svg-load('./icon/minimize.svg');
+	background-repeat: no-repeat;
+	background-position: bottom 3px left 4px;
+}
+
+.contactStyle .title-bar-controls button[aria-label='Maximize'],
+.contactStyle .title-bar-controls button[aria-label].maximize {
+	background-image: svg-load('./icon/maximize.svg');
+	background-repeat: no-repeat;
+	background-position: top 2px left 3px;
+}
+
+.contactStyle .title-bar-controls button[aria-label='Maximize']:disabled,
+.contactStyle .title-bar-controls button[aria-label].maximize:disabled {
+	background-image: svg-load('./icon/maximize-disabled.svg');
+	background-repeat: no-repeat;
+	background-position: top 2px left 3px;
+}
+
+.contactStyle .title-bar-controls button[aria-label='Restore'],
+.contactStyle .title-bar-controls button[aria-label].restore {
+	background-image: svg-load('./icon/restore.svg');
+	background-repeat: no-repeat;
+	background-position: top 2px left 3px;
+}
+
+.contactStyle .title-bar-controls button[aria-label='Help'],
+.contactStyle .title-bar-controls button[aria-label].help {
+	background-image: svg-load('./icon/help.svg');
+	background-repeat: no-repeat;
+	background-position: top 2px left 5px;
+}
+
+.contactStyle .title-bar-controls button[aria-label='Close'],
+.contactStyle .title-bar-controls button[aria-label].close {
+	margin-left: 2px;
+	background-image: svg-load('./icon/close.svg');
+	background-repeat: no-repeat;
+	background-position: top 3px left 4px;
+}
+
+.contactStyle .status-bar {
+	margin: 0px 1px;
+	display: flex;
+	gap: 1px;
+}
+
+.contactStyle .status-bar-field {
+	box-shadow: inset -1px -1px #dfdfdf, inset 1px 1px #808080;
+	flex-grow: 1;
+	padding: 2px 3px;
+	margin: 0;
+}
+
+.contactStyle .window-body {
+	margin: var(--element-spacing);
+}
+
+.contactStyle fieldset {
+	border-image: svg-load('./icon/groupbox-border.svg') 2;
+	padding: calc(2 * var(--border-width) + var(--element-spacing));
+	padding-block-start: var(--element-spacing);
+	margin: 0;
+}
+
+.contactStyle legend {
+	background: var(--surface);
+}
+
+.contactStyle .field-row {
+	display: flex;
+	align-items: center;
+}
+
+.contactStyle [class^='field-row'] + [class^='field-row'] {
+	margin-top: var(--grouped-element-spacing);
+}
+
+.contactStyle .field-row > * + * {
+	margin-left: var(--grouped-element-spacing);
+}
+
+.contactStyle .field-row-stacked {
+	display: flex;
+	flex-direction: column;
+}
+
+.contactStyle .field-row-stacked * + * {
+	margin-top: var(--grouped-element-spacing);
+}
+
+.contactStyle label {
+	display: inline-flex;
+	align-items: center;
+}
+
+.contactStyle input[type='radio'],
+.contactStyle input[type='checkbox'] {
+	appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	margin: 0;
+	background: 0;
+	position: fixed;
+	opacity: 0;
+	border: none;
+}
+
+.contactStyle input[type='radio'] + label,
+.contactStyle input[type='checkbox'] + label {
+	line-height: 13px;
+}
+
+.contactStyle input[type='radio'] + label {
+	position: relative;
+	margin-left: var(--radio-total-width);
+}
+
+.contactStyle input[type='radio'] + label::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: calc(-1 * (var(--radio-total-width-precalc)));
+	display: inline-block;
+	width: var(--radio-width);
+	height: var(--radio-width);
+	margin-right: var(--radio-label-spacing);
+	background: svg-load('./icon/radio-border.svg');
+}
+
+.contactStyle input[type='radio']:active + label::before {
+	background: svg-load('./icon/radio-border-disabled.svg');
+}
+
+.contactStyle input[type='radio']:checked + label::after {
+	content: '';
+	display: block;
+	width: var(--radio-dot-width);
+	height: var(--radio-dot-width);
+	top: var(--radio-dot-top);
+	left: var(--radio-dot-left);
+	position: absolute;
+	background: svg-load('./icon/radio-dot.svg');
+}
+
+.contactStyle input[type='radio']:focus + label,
+.contactStyle input[type='checkbox']:focus + label {
+	outline: 1px dotted #000000;
+}
+
+.contactStyle input[type='radio'][disabled] + label::before {
+	background: svg-load('./icon/radio-border-disabled.svg');
+}
+
+.contactStyle input[type='radio'][disabled]:checked + label::after {
+	background: svg-load('./icon/radio-dot-disabled.svg');
+}
+
+.contactStyle input[type='checkbox'] + label {
+	position: relative;
+	margin-left: var(--checkbox-total-width);
+}
+
+.contactStyle input[type='checkbox'] + label::before {
+	content: '';
+	position: absolute;
+	left: calc(-1 * (var(--checkbox-total-width-precalc)));
+	display: inline-block;
+	width: var(--checkbox-width);
+	height: var(--checkbox-width);
+	background: var(--button-highlight);
+	box-shadow: var(--border-field);
+	margin-right: var(--radio-label-spacing);
+}
+
+.contactStyle input[type='checkbox']:active + label::before {
+	background: var(--surface);
+}
+
+.contactStyle input[type='checkbox']:checked + label::after {
+	content: '';
+	display: block;
+	width: var(--checkmark-width);
+	height: var(--checkmark-width);
+	position: absolute;
+	left: calc(-1 * (var(--checkbox-total-width-precalc)) + var(--checkmark-left));
+	background: svg-load('./icon/checkmark.svg');
+}
+
+.contactStyle input[type='checkbox'][disabled] + label::before {
+	background: var(--surface);
+}
+
+.contactStyle input[type='checkbox'][disabled]:checked + label::after {
+	background: svg-load('./icon/checkmark-disabled.svg');
+}
+
+.contactStyle input[type='text'],
+.contactStyle input[type='password'],
+.contactStyle input[type='email'],
+.contactStyle input[type='tel'],
+.contactStyle input[type='number'],
+.contactStyle input[type='search'],
+.contactStyle select,
+.contactStyle textarea {
+	padding: 3px 4px;
+	border: none;
+	box-shadow: var(--border-field);
+	background-color: var(--button-highlight);
+	box-sizing: border-box;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	border-radius: 0;
+}
+
+.contactStyle input[type='text'],
+.contactStyle input[type='password'],
+.contactStyle input[type='email'],
+.contactStyle input[type='tel'],
+.contactStyle input[type='search'],
+.contactStyle select {
+	height: 21px;
+}
+
+.contactStyle input[type='number'] {
+	/* need this 1 pixel to fit the spinner controls in box */
+	height: 22px;
+}
+
+/* clears the ‘X’ from Internet Explorer */
+.contactStyle input[type='search']::-ms-clear {
+	display: none;
+	width: 0;
+	height: 0;
+}
+
+.contactStyle input[type='search']::-ms-reveal {
+	display: none;
+	width: 0;
+	height: 0;
+}
+
+/* clears the ‘X’ from Chrome */
+.contactStyle input[type='search']::-webkit-search-decoration,
+.contactStyle input[type='search']::-webkit-search-cancel-button,
+.contactStyle input[type='search']::-webkit-search-results-button,
+.contactStyle input[type='search']::-webkit-search-results-decoration {
+	display: none;
+}
+
+.contactStyle input[type='text'],
+.contactStyle input[type='password'],
+.contactStyle input[type='email'],
+.contactStyle input[type='tel'],
+.contactStyle input[type='number'],
+.contactStyle input[type='search'] {
+	/* For some reason descenders are getting cut off without this */
+	line-height: 2;
+}
+
+.contactStyle input[type='email']:disabled,
+.contactStyle input[type='tel']:disabled,
+.contactStyle input[type='password']:disabled,
+.contactStyle input[type='text']:disabled,
+.contactStyle input[type='number']:disabled,
+.contactStyle input[type='search']:disabled,
+.contactStyle input[type='email']:read-only,
+.contactStyle input[type='tel']:read-only,
+.contactStyle input[type='password']:read-only,
+.contactStyle input[type='text']:read-only,
+.contactStyle input[type='number']:read-only,
+.contactStyle input[type='search']:read-only,
+.contactStyle textarea:disabled {
+	background-color: var(--surface);
+}
+
+.contactStyle select {
+	appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	position: relative;
+	padding-right: 32px;
+	background-image: svg-load('./icon/button-down.svg');
+	background-position: top 2px right 2px;
+	background-repeat: no-repeat;
+	border-radius: 0;
+}
+
+.contactStyle select:focus,
+.contactStyle input[type='text']:focus,
+.contactStyle input[type='password']:focus,
+.contactStyle input[type='email']:focus,
+.contactStyle input[type='tel']:focus,
+.contactStyle input[type='number']:focus,
+.contactStyle input[type='search']:focus,
+.contactStyle textarea:focus {
+	outline: none;
+}
+
+.contactStyle input[type='range'] {
+	-webkit-appearance: none;
+	width: 100%;
+	background: transparent;
+}
+
+.contactStyle input[type='range']:focus {
+	outline: none;
+}
+
+.contactStyle input[type='range']::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	height: 21px;
+	width: 11px;
+	background: svg-load('./icon/indicator-horizontal.svg');
+	transform: translateY(-8px);
+	box-shadow: none;
+	border: none;
+}
+
+.contactStyle input[type='range'].has-box-indicator::-webkit-slider-thumb {
+	background: svg-load('./icon/indicator-rectangle-horizontal.svg');
+	transform: translateY(-10px);
+}
+
+.contactStyle input[type='range']::-moz-range-thumb {
+	height: 21px;
+	width: 11px;
+	border: 0;
+	border-radius: 0;
+	background: svg-load('./icon/indicator-horizontal.svg');
+	transform: translateY(2px);
+}
+
+.contactStyle input[type='range'].has-box-indicator::-moz-range-thumb {
+	background: svg-load('./icon/indicator-rectangle-horizontal.svg');
+	transform: translateY(0px);
+}
+
+.contactStyle input[type='range']::-webkit-slider-runnable-track {
+	width: 100%;
+	height: 2px;
+	box-sizing: border-box;
+	background: black;
+	border-right: 1px solid grey;
+	border-bottom: 1px solid grey;
+	box-shadow: 1px 0 0 white, 1px 1px 0 white, 0 1px 0 white, -1px 0 0 darkgrey, -1px -1px 0 darkgrey,
+		0 -1px 0 darkgrey, -1px 1px 0 white, 1px -1px darkgrey;
+}
+
+.contactStyle input[type='range']::-moz-range-track {
+	width: 100%;
+	height: 2px;
+	box-sizing: border-box;
+	background: black;
+	border-right: 1px solid grey;
+	border-bottom: 1px solid grey;
+	box-shadow: 1px 0 0 white, 1px 1px 0 white, 0 1px 0 white, -1px 0 0 darkgrey, -1px -1px 0 darkgrey,
+		0 -1px 0 darkgrey, -1px 1px 0 white, 1px -1px darkgrey;
+}
+
+.contactStyle .is-vertical {
+	display: inline-block;
+	width: 4px;
+	height: 150px;
+	transform: translateY(50%);
+}
+
+.contactStyle .is-vertical > input[type='range'] {
+	width: 150px;
+	height: 4px;
+	margin: 0 calc(var(--grouped-element-spacing) + var(--range-spacing)) 0 var(--range-spacing);
+	transform-origin: left;
+	transform: rotate(270deg) translateX(calc(-50% + var(--element-spacing)));
+}
+
+.contactStyle .is-vertical > input[type='range']::-webkit-slider-runnable-track {
+	border-left: 1px solid grey;
+	border-right: 0;
+	border-bottom: 1px solid grey;
+	box-shadow: -1px 0 0 white, -1px 1px 0 white, 0 1px 0 white, 1px 0 0 darkgrey, 1px -1px 0 darkgrey,
+		0 -1px 0 darkgrey, 1px 1px 0 white, -1px -1px darkgrey;
+}
+
+.contactStyle .is-vertical > input[type='range']::-moz-range-track {
+	border-left: 1px solid grey;
+	border-right: 0;
+	border-bottom: 1px solid grey;
+	box-shadow: -1px 0 0 white, -1px 1px 0 white, 0 1px 0 white, 1px 0 0 darkgrey, 1px -1px 0 darkgrey,
+		0 -1px 0 darkgrey, 1px 1px 0 white, -1px -1px darkgrey;
+}
+
+.contactStyle .is-vertical > input[type='range']::-webkit-slider-thumb {
+	transform: translateY(-8px) scaleX(-1);
+}
+
+.contactStyle .is-vertical > input[type='range'].has-box-indicator::-webkit-slider-thumb {
+	transform: translateY(-10px) scaleX(-1);
+}
+
+.contactStyle .is-vertical > input[type='range']::-moz-range-thumb {
+	transform: translateY(2px) scaleX(-1);
+}
+
+.contactStyle .is-vertical > input[type='range'].has-box-indicator::-moz-range-thumb {
+	transform: translateY(0px) scaleX(-1);
+}
+
+.contactStyle select:focus {
+	color: var(--button-highlight);
+	background-color: var(--dialog-blue);
+}
+
+.contactStyle select:focus option {
+	color: #000;
+	background-color: #fff;
+}
+
+.contactStyle select:active {
+	background-image: svg-load('./icon/button-down-active.svg');
+}
+
+.contactStyle a {
+	color: var(--link-blue);
+}
+
+.contactStyle a:focus {
+	outline: 1px dotted var(--link-blue);
+}
+
+.contactStyle ul.tree-view {
+	display: block;
+	background: var(--button-highlight);
+	box-shadow: var(--border-field);
+	padding: 6px;
+	margin: 0;
+}
+
+.contactStyle ul.tree-view li {
+	list-style-type: none;
+}
+
+.contactStyle ul.tree-view a {
+	text-decoration: none;
+	color: #000;
+}
+
+.contactStyle ul.tree-view a:focus {
+	background-color: var(--dialog-blue);
+	color: var(--button-highlight);
+}
+
+.contactStyle ul.tree-view ul,
+.contactStyle ul.tree-view li {
+	margin-top: 3px;
+}
+
+.contactStyle ul.tree-view ul {
+	margin-left: 16px;
+	padding-left: 16px;
+	/* Goes down too far */
+	border-left: 1px dotted #808080;
+}
+
+.contactStyle ul.tree-view ul > li {
+	position: relative;
+}
+
+.contactStyle ul.tree-view ul > li::before {
+	content: '';
+	display: block;
+	position: absolute;
+	left: -16px;
+	top: 6px;
+	width: 12px;
+	border-bottom: 1px dotted #808080;
+}
+
+/* Cover the bottom of the left dotted border */
+.contactStyle ul.tree-view ul > li:last-child::after {
+	content: '';
+	display: block;
+	position: absolute;
+	left: -20px;
+	top: 7px;
+	bottom: 0px;
+	width: 8px;
+	background: var(--button-highlight);
+}
+
+.contactStyle ul.tree-view details {
+	margin-top: 0;
+}
+
+.contactStyle ul.tree-view details[open] summary {
+	margin-bottom: 0;
+}
+
+.contactStyle ul.tree-view ul details > summary:before {
+	margin-left: -22px;
+	position: relative;
+	z-index: 1;
+}
+
+.contactStyle ul.tree-view details > summary:before {
+	text-align: center;
+	display: block;
+	float: left;
+	content: '+';
+	border: 1px solid #808080;
+	width: 8px;
+	height: 9px;
+	line-height: 8px;
+	margin-right: 5px;
+	padding-left: 1px;
+	background-color: #fff;
+}
+
+.contactStyle ul.tree-view details[open] > summary:before {
+	content: '-';
+}
+
+.contactStyle ul.tree-view details > summary::marker,
+.contactStyle ul.tree-view details > summary::-webkit-details-marker {
+	content: '';
+}
+
+.contactStyle pre {
+	display: block;
+	background: var(--button-highlight);
+	box-shadow: var(--border-field);
+	padding: 12px 8px;
+	margin: 0;
+}
+
+.contactStyle code,
+.contactStyle code * {
+	font-family: monospace;
+}
+
+.contactStyle summary:focus {
+	outline: 1px dotted #000000;
+}
+
+.contactStyle ::-webkit-scrollbar {
+	width: 16px;
+}
+
+.contactStyle ::-webkit-scrollbar:horizontal {
+	height: 17px;
+}
+
+.contactStyle ::-webkit-scrollbar-corner {
+	background: var(--button-face);
+}
+
+.contactStyle ::-webkit-scrollbar-track {
+	background-image: svg-load('./icon/scrollbar-background.svg');
+}
+
+.contactStyle ::-webkit-scrollbar-thumb {
+	background-color: var(--button-face);
+	box-shadow: var(--border-raised-outer), var(--border-raised-inner);
+}
+
+.contactStyle ::-webkit-scrollbar-button:horizontal:start:decrement,
+.contactStyle ::-webkit-scrollbar-button:horizontal:end:increment,
+.contactStyle ::-webkit-scrollbar-button:vertical:start:decrement,
+.contactStyle ::-webkit-scrollbar-button:vertical:end:increment {
+	display: block;
+}
+
+.contactStyle ::-webkit-scrollbar-button:vertical:start {
+	height: 17px;
+	background-image: svg-load('./icon/button-up.svg');
+}
+
+.contactStyle ::-webkit-scrollbar-button:vertical:end {
+	height: 17px;
+	background-image: svg-load('./icon/button-down.svg');
+}
+
+.contactStyle ::-webkit-scrollbar-button:horizontal:start {
+	width: 16px;
+	background-image: svg-load('./icon/button-left.svg');
+}
+
+.contactStyle ::-webkit-scrollbar-button:horizontal:end {
+	width: 16px;
+	background-image: svg-load('./icon/button-right.svg');
+}
+
+.contactStyle .window[role='tabpanel'] {
+	position: relative;
+	z-index: 2;
+}
+
+.contactStyle menu[role='tablist'] {
+	position: relative;
+	margin: 0 0 -2px 0;
+	text-indent: 0;
+	list-style-type: none;
+	display: flex;
+	padding-left: 3px;
+}
+
+.contactStyle menu[role='tablist'] > li {
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+	box-shadow: var(--border-tab);
+	z-index: 1;
+}
+
+.contactStyle menu[role='tablist'] > li[aria-selected='true'] {
+	padding-bottom: 2px;
+	margin-top: -2px;
+	background-color: var(--surface);
+	position: relative;
+	z-index: 8;
+	margin-left: -3px;
+}
+
+.contactStyle menu[role='tablist'] > li > a {
+	display: block;
+	color: #222;
+	margin: 6px;
+	text-decoration: none;
+}
+
+.contactStyle menu[role='tablist'] > li[aria-selected='true'] > a:focus {
+	outline: none;
+}
+
+.contactStyle menu[role='tablist'] > li > a:focus {
+	outline: 1px dotted #222;
+}
+
+.contactStyle menu[role='tablist'].multirows > li {
+	flex-grow: 1;
+	text-align: center;
+}
+
+.contactStyle .sunken-panel {
+	box-sizing: border-box;
+	border: 2px groove transparent;
+	border-image: svg-load('./icon/sunken-panel-border.svg') 2;
+	overflow: auto;
+	background-color: #fff;
+}
+
+.contactStyle table {
+	border-collapse: collapse;
+	position: relative;
+	text-align: left;
+	white-space: nowrap;
+	background-color: #fff;
+}
+
+.contactStyle table > thead > tr > * {
+	position: sticky;
+	top: 0;
+	height: 17px;
+	box-shadow: var(--border-raised-outer), var(--border-raised-inner);
+	background: var(--surface);
+	box-sizing: border-box;
+	font-weight: normal;
+	padding: 0 var(--grouped-element-spacing);
+}
+
+.contactStyle table.interactive > tbody > tr {
+	cursor: pointer;
+}
+
+.contactStyle table > tbody > tr.highlighted {
+	color: #fff;
+	background-color: var(--dialog-blue);
+}
+
+.contactStyle table > tbody > tr > * {
+	padding: 0 var(--grouped-element-spacing);
+	height: 14px;
+}
+
+.contactStyle .progress-indicator {
+	height: 32px;
+	position: relative;
+	box-shadow: var(--border-sunken-inner);
+	padding: 4px 4px;
+	border: none;
+	box-sizing: border-box;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	border-radius: 0;
+}
+
+.contactStyle .progress-indicator > .progress-indicator-bar {
+	height: 100%;
+	display: block;
+	background-color: var(--dialog-blue);
+}
+
+.contactStyle .progress-indicator.segmented > .progress-indicator-bar {
+	width: 100%;
+	background-color: transparent; /* resets the background color which is set to blue in the non-segmented selector */
+	background-image: linear-gradient(90deg, var(--dialog-blue) 0 16px, transparent 0 2px);
+	background-repeat: repeat;
+	background-size: 18px 100%;
+}
