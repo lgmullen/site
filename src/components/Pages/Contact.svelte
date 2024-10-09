@@ -4,14 +4,6 @@
 
 <div class="about-page contactStyle" id="contact">
 	<h1>Contact</h1>
-	<div class="window" style="margin: 32px; width: 250px; height:400px">
-		<div class="title-bar">
-			<div class="title-bar-text">My First VB4 Program</div>
-		</div>
-		<div class="window-body">
-			<p>Hello, world!</p>
-		</div>
-	</div>
 	<div class="item-container">
 		<a
 			href="https://www.linkedin.com/in/lawrence-mullen/"

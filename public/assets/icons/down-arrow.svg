@@ -1,26 +1,9 @@
-<script lang="ts">
-	export let name: keyof typeof icons;
-	export let width = '1rem';
-	export let height = '1rem';
-	export let stroke = '#000000';
-	export let fill = '#000000';
-
-	export let focusable: string | number | null | undefined = undefined;
-	let icons = {
-		delete: {
-			viewBox: '0 0 24 24',
-			svg: `
-        <path d="M4 18L20 18"  stroke-width="2" stroke-linecap="round"/>
-        <path d="M4 12L20 12"  stroke-width="2" stroke-linecap="round"/>
-        <path d="M4 6L20 6"  stroke-width="2" stroke-linecap="round"/>`
-		},
-		cross: {
-			viewBox: '6.5 2 11 16',
-			svg: `<path d="M6.99486 7.00636C6.60433 7.39689 6.60433 8.03005 6.99486 8.42058L10.58 12.0057L6.99486 15.5909C6.60433 15.9814 6.60433 16.6146 6.99486 17.0051C7.38538 17.3956 8.01855 17.3956 8.40907 17.0051L11.9942 13.4199L15.5794 17.0051C15.9699 17.3956 16.6031 17.3956 16.9936 17.0051C17.3841 16.6146 17.3841 15.9814 16.9936 15.5909L13.4084 12.0057L16.9936 8.42059C17.3841 8.03007 17.3841 7.3969 16.9936 7.00638C16.603 6.61585 15.9699 6.61585 15.5794 7.00638L11.9942 10.5915L8.40907 7.00636C8.01855 6.61584 7.38538 6.61584 6.99486 7.00636Z"/>`
-		},
-		downButton: {
-			viewBox: '0 0 512 512',
-			svg: `<path style="fill:#8AE9FF;" d="M16.812,65.299c0-34.546,31.418-60.518,65.37-54.137c68.568,12.886,131.647,46.02,182.055,96.429
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+<svg height="800px" width="800px" version="1.1" id="Layer_1"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve">
+    <path style="fill:#8AE9FF;" d="M16.812,65.299c0-34.546,31.418-60.518,65.37-54.137c68.568,12.886,131.647,46.02,182.055,96.429
 	c55.695,55.694,90.299,126.858,99.809,203.801l36.347-36.347c21.213-21.213,55.775-22.512,77.561-1.889
 	c22.604,21.396,22.973,57.076,1.11,78.941L345.454,485.707c-21.5,21.5-56.36,21.5-77.861,0L133.984,352.098
 	c-10.75-10.751-16.125-24.84-16.125-38.93c0-14.487,5.682-28.974,17.046-39.831c21.759-20.788,56.443-19.596,77.723,1.682
@@ -46,18 +29,5 @@
         <path style="fill:#248A9C;" d="M196.385,375.917c-2.611,0-5.22-0.997-7.212-2.988l-5.665-5.665c-3.983-3.983-3.983-10.442,0-14.426
 		c3.984-3.982,10.441-3.982,14.426,0l5.665,5.665c3.983,3.983,3.983,10.442,0,14.426
 		C201.605,374.92,198.996,375.917,196.385,375.917z"/>
-    </g>`
-		}
-	} as const;
-	let displayIcon = icons[name];
-</script>
-
-<svg
-	class={$$props.class}
-	{fill}
-	{stroke}
-	{focusable}
-	{width}
-	{height}
-	viewBox={displayIcon?.viewBox}>{@html displayIcon.svg}</svg
->
+    </g>
+</svg>

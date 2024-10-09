@@ -31,12 +31,14 @@
 
 <!-- svelte-ignore a11y-no-static-element-interactions -->
 <svelte:window on:mousemove={handleMousemove} on:scroll={handleScroll} />
+<Header bind:displayInvertedCursor />
+
 <div id="articles">
 	{#if displayInvertedCursor == true}
 		<div style="--mouseX:{mouseX}; --posY:{posY}" id="invertedcursor" />
 	{/if}
+
 	<!-- svelte-ignore a11y-no-static-element-interactions -->
-	<Header bind:displayInvertedCursor />
 	<Experience />
 	<About />
 	<Work />
@@ -49,6 +51,8 @@
 		font-family: Serial, Impact, 'Arial Narrow', Arial, sans-serif;
 		display: flex;
 		flex-direction: column;
+		position: relative;
+		padding-left: 88px;
 	}
 	#invertedcursor {
 		pointer-events: none;

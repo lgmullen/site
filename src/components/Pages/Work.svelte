@@ -88,10 +88,9 @@
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		min-height: calc(100vh - 100px);
-		background-color: rgb(0, 0, 0);
+		min-height: 100vh;
+		background-color: rgb(10, 10, 10);
 		scroll-behavior: smooth;
-		scroll-margin-top: 100px;
 		position: relative;
 	}
 	.grid-container {

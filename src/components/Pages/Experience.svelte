@@ -229,8 +229,6 @@
 		image-rendering: pixelated;
 		background-repeat: repeat;
 		scroll-behavior: smooth;
-		scroll-margin-top: 100px;
-		margin-top: 100px;
 		padding: 1rem;
 		font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 		min-height: calc(100vh);
