@@ -752,7 +752,7 @@
 .contactStyle ul.tree-view ul details > summary:before {
 	margin-left: -22px;
 	position: relative;
-	z-index: 1;
+	z-index: 10;
 }
 
 .contactStyle ul.tree-view details > summary:before {
@@ -845,7 +845,7 @@
 
 .contactStyle .window[role='tabpanel'] {
 	position: relative;
-	z-index: 2;
+	z-index: 20;
 }
 
 .contactStyle menu[role='tablist'] {
@@ -861,7 +861,7 @@
 	border-top-left-radius: 3px;
 	border-top-right-radius: 3px;
 	box-shadow: var(--border-tab);
-	z-index: 1;
+	z-index: 10;
 }
 
 .contactStyle menu[role='tablist'] > li[aria-selected='true'] {
@@ -869,7 +869,7 @@
 	margin-top: -2px;
 	background-color: var(--surface);
 	position: relative;
-	z-index: 8;
+	z-index: 80;
 	margin-left: -3px;
 }
 

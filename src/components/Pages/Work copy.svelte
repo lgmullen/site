@@ -8,14 +8,6 @@
 		<MediaQuery query="(min-width: 768px)" let:matches>
 			{#if matches}
 				<div class="grid-container">
-					<div class="cube-top">
-						<div class="cube-top-svg w-embed">
-							<svg viewBox="0 0 1400 218"
-								><path d="M140 0h1120l140 218H0z" fill="none" stroke="currentColor" /></svg
-							>
-						</div>
-					</div>
-
 					<Project
 						imageSrc="images/project-pictures/fairchain.png"
 						projectUrl="https://www.nytimes.com/2022/03/23/arts/design/fairchain-artists-resale-royalties.html"
@@ -57,46 +49,16 @@
 </div>
 
 <style>
-	.cube-top {
-		box-sizing: border-box;
-		color: rgb(182, 255, 245);
-		cursor: none;
-		display: block;
-		font-size: 16px;
-		left: -2px;
-		line-height: 25.6px;
-		top: 7px;
-	}
-
-	.cube-top-svg {
-		backface-visibility: hidden;
-		box-sizing: border-box;
-		color: rgb(182, 255, 245);
-		cursor: none;
-		display: block;
-		font-family: 'Open Sans', sans-serif;
-		height: 135.945px;
-		max-width: 1150px;
-		stroke-width: 2px;
-		width: 100%;
-		-webkit-font-smoothing: antialiased;
-		-webkit-tap-highlight-color: transparent;
-		margin-bottom: 16px;
-	}
 	#work {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
 		min-height: calc(100vh - 100px);
-		background-color: rgb(0, 0, 0);
+		background-color: #e2bfe3;
 		scroll-behavior: smooth;
 		scroll-margin-top: 100px;
-		position: relative;
 	}
 	.grid-container {
-		display: flex;
-		flex-direction: column;
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		justify-content: flex-start;
 	}
 	@media only screen and (max-width: 768px) {
 		.grid-container {
