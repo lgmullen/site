@@ -39,9 +39,9 @@
 	{/if}
 
 	<!-- svelte-ignore a11y-no-static-element-interactions -->
-	<Experience />
 	<About />
 	<Work />
+	<Experience />
 	<Contact />
 </div>
 
@@ -63,7 +63,7 @@
 		left: calc(var(--mouseX, 0) * 1px);
 		background: #fff;
 		border-radius: 50%;
-		z-index: 3;
+		z-index: 10000;
 		transform: translate(-50%, -50%);
 		mix-blend-mode: difference;
 		transition: transform 0.9s;

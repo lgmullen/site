@@ -5,12 +5,13 @@
 	export let tech: string[] | undefined;
 	export let projectUrl: string | null | undefined = null;
 	export let imageSrc: string | undefined = undefined;
+	export let year: string | undefined;
 </script>
 
 <div class="grid-item contactStyle">
 	<a href={projectUrl} target="_blank" class="block-content">
 		<div class="block-title-wrapper">
-			<div class="block-item year"><p>2023</p></div>
+			<div class="block-item year"><p>{year ?? 2024}</p></div>
 			<div class="block-item title"><p>{title}</p></div>
 			<div class="block-item type"><p>Project</p></div>
 			<div class="block-item tech"><p>React</p></div>
@@ -28,7 +29,7 @@
 
 	<div class="window image-pic" style=" width: 200px; min-height:300px">
 		<div class="title-bar">
-			<div class="title-bar-text">My First VB4 Program</div>
+			<div class="title-bar-text">My Program</div>
 			<div class="title-bar-controls">
 				<button aria-label="Minimize" />
 				<button aria-label="Maximize" />
@@ -40,6 +41,19 @@
 			<div class="image-container" style="background-image: url({imageSrc});">
 				<div class="img-fill" />
 			</div>
+			<ul class="tree-view">
+				<details open>
+					<summary>Tech</summary>
+
+					<ul>
+						{#if tech}
+							{#each tech as item}
+								<li>{item}</li>
+							{/each}
+						{/if}
+					</ul>
+				</details>
+			</ul>
 		</div>
 	</div>
 </div>
@@ -157,7 +171,7 @@
 		min-height: 100px;
 		min-width: 100px;
 		position: absolute;
-		top: 30%;
+		top: 10%;
 		right: 24px;
 		margin-right: 12px;
 		color: navy;

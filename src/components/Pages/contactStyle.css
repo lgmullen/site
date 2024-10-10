@@ -265,21 +265,21 @@
 
 .contactStyle .title-bar-controls button[aria-label='Maximize']:disabled,
 .contactStyle .title-bar-controls button[aria-label].maximize:disabled {
-	background-image: svg-load('./icon/maximize-disabled.svg');
+	background-image: url('/icon/maximize-disabled.svg');
 	background-repeat: no-repeat;
 	background-position: top 2px left 3px;
 }
 
 .contactStyle .title-bar-controls button[aria-label='Restore'],
 .contactStyle .title-bar-controls button[aria-label].restore {
-	background-image: svg-load('./icon/restore.svg');
+	background-image: url('/icon/restore.svg');
 	background-repeat: no-repeat;
 	background-position: top 2px left 3px;
 }
 
 .contactStyle .title-bar-controls button[aria-label='Help'],
 .contactStyle .title-bar-controls button[aria-label].help {
-	background-image: svg-load('./icon/help.svg');
+	background-image: url('/icon/help.svg');
 	background-repeat: no-repeat;
 	background-position: top 2px left 5px;
 }
@@ -311,7 +311,7 @@
 }
 
 .contactStyle fieldset {
-	border-image: svg-load('./icon/groupbox-border.svg') 2;
+	border-image: url('/icon/groupbox-border.svg') 2;
 	padding: calc(2 * var(--border-width) + var(--element-spacing));
 	padding-block-start: var(--element-spacing);
 	margin: 0;
@@ -379,11 +379,11 @@
 	width: var(--radio-width);
 	height: var(--radio-width);
 	margin-right: var(--radio-label-spacing);
-	background: svg-load('./icon/radio-border.svg');
+	background: url('/icon/radio-border.svg');
 }
 
 .contactStyle input[type='radio']:active + label::before {
-	background: svg-load('./icon/radio-border-disabled.svg');
+	background: url('/icon/radio-border-disabled.svg');
 }
 
 .contactStyle input[type='radio']:checked + label::after {
@@ -394,7 +394,7 @@
 	top: var(--radio-dot-top);
 	left: var(--radio-dot-left);
 	position: absolute;
-	background: svg-load('./icon/radio-dot.svg');
+	background: url('/icon/radio-dot.svg');
 }
 
 .contactStyle input[type='radio']:focus + label,
@@ -403,11 +403,11 @@
 }
 
 .contactStyle input[type='radio'][disabled] + label::before {
-	background: svg-load('./icon/radio-border-disabled.svg');
+	background: url('/icon/radio-border-disabled.svg');
 }
 
 .contactStyle input[type='radio'][disabled]:checked + label::after {
-	background: svg-load('./icon/radio-dot-disabled.svg');
+	background: url('/icon/radio-dot-disabled.svg');
 }
 
 .contactStyle input[type='checkbox'] + label {
@@ -438,7 +438,7 @@
 	height: var(--checkmark-width);
 	position: absolute;
 	left: calc(-1 * (var(--checkbox-total-width-precalc)) + var(--checkmark-left));
-	background: svg-load('./icon/checkmark.svg');
+	background: url('/icon/checkmark.svg');
 }
 
 .contactStyle input[type='checkbox'][disabled] + label::before {
@@ -446,7 +446,7 @@
 }
 
 .contactStyle input[type='checkbox'][disabled]:checked + label::after {
-	background: svg-load('./icon/checkmark-disabled.svg');
+	background: url('/icon/checkmark-disabled.svg');
 }
 
 .contactStyle input[type='text'],
@@ -535,7 +535,7 @@
 	-moz-appearance: none;
 	position: relative;
 	padding-right: 32px;
-	background-image: svg-load('./icon/button-down.svg');
+	background-image: url('/icon/button-down.svg');
 	background-position: top 2px right 2px;
 	background-repeat: no-repeat;
 	border-radius: 0;
@@ -566,14 +566,14 @@
 	-webkit-appearance: none;
 	height: 21px;
 	width: 11px;
-	background: svg-load('./icon/indicator-horizontal.svg');
+	background: url('/icon/indicator-horizontal.svg');
 	transform: translateY(-8px);
 	box-shadow: none;
 	border: none;
 }
 
 .contactStyle input[type='range'].has-box-indicator::-webkit-slider-thumb {
-	background: svg-load('./icon/indicator-rectangle-horizontal.svg');
+	background: url('/icon/indicator-rectangle-horizontal.svg');
 	transform: translateY(-10px);
 }
 
@@ -582,12 +582,12 @@
 	width: 11px;
 	border: 0;
 	border-radius: 0;
-	background: svg-load('./icon/indicator-horizontal.svg');
+	background: url('/icon/indicator-horizontal.svg');
 	transform: translateY(2px);
 }
 
 .contactStyle input[type='range'].has-box-indicator::-moz-range-thumb {
-	background: svg-load('./icon/indicator-rectangle-horizontal.svg');
+	background: url('/icon/indicator-rectangle-horizontal.svg');
 	transform: translateY(0px);
 }
 
@@ -671,7 +671,7 @@
 }
 
 .contactStyle select:active {
-	background-image: svg-load('./icon/button-down-active.svg');
+	background-image: url('/icon/button-down-active.svg');
 }
 
 .contactStyle a {
@@ -809,7 +809,7 @@
 }
 
 .contactStyle ::-webkit-scrollbar-track {
-	background-image: svg-load('./icon/scrollbar-background.svg');
+	background-image: url('/icon/scrollbar-background.svg');
 }
 
 .contactStyle ::-webkit-scrollbar-thumb {
@@ -826,22 +826,22 @@
 
 .contactStyle ::-webkit-scrollbar-button:vertical:start {
 	height: 17px;
-	background-image: svg-load('./icon/button-up.svg');
+	background-image: url('/icon/button-up.svg');
 }
 
 .contactStyle ::-webkit-scrollbar-button:vertical:end {
 	height: 17px;
-	background-image: svg-load('./icon/button-down.svg');
+	background-image: url('/icon/button-down.svg');
 }
 
 .contactStyle ::-webkit-scrollbar-button:horizontal:start {
 	width: 16px;
-	background-image: svg-load('./icon/button-left.svg');
+	background-image: url('/icon/button-left.svg');
 }
 
 .contactStyle ::-webkit-scrollbar-button:horizontal:end {
 	width: 16px;
-	background-image: svg-load('./icon/button-right.svg');
+	background-image: url('/icon/button-right.svg');
 }
 
 .contactStyle .window[role='tabpanel'] {
@@ -897,7 +897,7 @@
 .contactStyle .sunken-panel {
 	box-sizing: border-box;
 	border: 2px groove transparent;
-	border-image: svg-load('./icon/sunken-panel-border.svg') 2;
+	border-image: url('/icon/sunken-panel-border.svg') 2;
 	overflow: auto;
 	background-color: #fff;
 }

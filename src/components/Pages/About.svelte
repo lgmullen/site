@@ -86,38 +86,12 @@
 		color: white;
 		font-size: 3rem;
 	}
-	#about:hover {
-		/* background-color: black; */
-	}
-	.text-container {
-		display: flex;
-		flex-direction: column;
-		flex: 1;
-		height: 100%;
-		justify-content: center;
-		font-family: 'Hyperblaster Regular';
-	}
-	.about-info {
-		display: flex;
-		flex-direction: column;
-		justify-content: space-between;
-		align-items: center;
-		border: 1px solid rgb(14, 255, 2);
-		background-color: rgb(39, 182, 0);
-		border-radius: 12px;
-		padding: 12px;
-		backdrop-filter: blur(10px);
-	}
-
-	.list-items {
-		column-count: 3;
-	}
 
 	.marquee {
 		height: 100px;
 		overflow: hidden;
 		position: relative;
-		background: #d8d8d8;
+		background: #20be00;
 		color: #333;
 		display: flex;
 		margin-top: 20px;

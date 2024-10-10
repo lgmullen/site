@@ -15,7 +15,15 @@
 							>
 						</div>
 					</div>
-
+					<Project
+						projectUrl="https://www.nytimes.com/2022/03/23/arts/design/fairchain-artists-resale-royalties.html"
+						title="Personal Website"
+						lineOne="▪ Built this personal website as an experiment with the Svelte Framework."
+						lineTwo="▪ Focused on native development in react native and Expo Go to create an app that helps
+			artists get royalties for resale."
+						tech={['Expo', 'Firebase', 'Tailwind', 'Jest', 'GraphQL', 'React', 'Typescript']}
+						year="2024"
+					/>
 					<Project
 						imageSrc="images/project-pictures/fairchain.png"
 						projectUrl="https://www.nytimes.com/2022/03/23/arts/design/fairchain-artists-resale-royalties.html"
@@ -24,6 +32,7 @@
 						lineTwo="▪ Focused on native development in react native and Expo Go to create an app that helps
 			artists get royalties for resale."
 						tech={['Expo', 'Firebase', 'Tailwind', 'Jest', 'GraphQL', 'React', 'Typescript']}
+						year="2022"
 					/>
 					<Project
 						imageSrc="images/project-pictures/kohls-holiday.png"
@@ -31,6 +40,7 @@
 						lineOne="▪ Collaborated with Kohl's design team to develop and code dynamic animations for the 2022 Kohl's digital holiday marketing campaign, generating engagement from 100,000+ users."
 						lineTwo="▪ Designed and implemented native sharing in React, enabling users to easily share their gift list animations with friends and family."
 						tech={['Expo', 'Firebase', 'Tailwind', 'Jest', 'GraphQL', 'React', 'Typescript']}
+						year="2022"
 					/>
 					<Project
 						imageSrc="images/project-pictures/tide-pools.png"
@@ -39,13 +49,7 @@
 						lineOne="▪ Simple react app to display ocean survey data."
 						lineTwo="▪ Uses Mapbox GL to help user visualize ocean exploration information."
 						tech={['React', 'Mui', 'React Query']}
-					/>
-					<Project
-						projectUrl="https://lgmullen.github.io/tide-pool/"
-						title="Tide Pool Table"
-						lineOne="▪ Simple react app to display ocean survey data."
-						lineTwo="▪ Uses Mapbox GL to help user visualize ocean exploration information."
-						tech={['React', 'Mui, React Query']}
+						year="2023"
 					/>
 				</div>
 			{/if}
