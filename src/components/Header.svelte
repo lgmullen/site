@@ -44,8 +44,6 @@
 			>
 		</label>
 		<h1 id="title-text">Lawrence mullen</h1>
-
-		<button> click me!</button>
 	</div>
 	<div class="menu-drawer">
 		<div id="nav-options">
@@ -109,18 +107,10 @@
 	}
 
 	@media only screen and (max-width: 768px) {
-		#nav-options {
-			display: none;
-		}
-		#mouse-toggle {
-			display: none;
-		}
-		.header-item {
-			display: none;
-		}
 		#header {
 			width: 100dvw;
 			overflow: hidden;
+			display: none;
 		}
 	}
 </style>

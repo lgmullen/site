@@ -118,14 +118,23 @@
 		}
 	}
 	@media only screen and (max-width: 768px) {
-		.about-info {
-			padding: 4px;
+		.image-container {
+			display: flex;
+			flex-direction: column;
+			box-sizing: border-box;
+			height: 400px;
+			border-top: 1px solid white;
+			border-bottom: 1px solid white;
+			margin-left: -2px;
 		}
-		.list-items {
-			column-count: 1;
+		#container {
+			display: flex;
+			flex: 1;
+			flex-direction: column;
+			border: 2px solid green;
 		}
-		li {
-			margin: 1rem;
+		#about {
+			width: 100%;
 		}
 	}
 </style>

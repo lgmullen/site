@@ -178,10 +178,26 @@
 		background-color: orangered;
 	}
 	@media only screen and (max-width: 768px) {
-		.item-container {
-			border: 2px solid red;
-			flex-direction: column;
-			align-items: center;
+		#contact-text {
+			font-size: 1rem;
+			color: white;
+			top: 0;
+			position: absolute;
+			text-align: center;
+			display: inline-block;
+		}
+		.contact-table-container {
+			display: flex;
+			background: black;
+			width: 100%;
+			height: 100%;
+			border: 2px solid green;
+			flex: 5;
+		}
+		.contact-table {
+			background: black;
+
+			width: calc(100% - 32px);
 		}
 	}
 </style>

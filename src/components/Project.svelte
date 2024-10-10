@@ -27,7 +27,10 @@
 		</div>
 	</a>
 
-	<div class="window image-pic" style=" width: 200px; min-height:300px">
+	<div
+		class="window image-pic"
+		style=" width: 200px; min-height:300px;pointer-events: none;  cursor: pointer;"
+	>
 		<div class="title-bar">
 			<div class="title-bar-text">My Program</div>
 			<div class="title-bar-controls">

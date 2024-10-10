@@ -43,9 +43,22 @@
 	<Work />
 	<Experience />
 	<Contact />
+	<div class="noise" />
 </div>
 
 <style>
+	.noise {
+		background-image: url('https://cdn.prod.website-files.com/6633d206a0410971e6ab2fe4/6633d206a0410971e6ab2fee_ezgif.com-gif-maker.gif');
+		background-position: 0 0;
+		background-size: auto;
+		width: 100vw;
+		height: 100vh;
+		position: fixed;
+		inset: 0%;
+		overflow: hidden;
+		opacity: 0.04;
+		pointer-events: none;
+	}
 	#articles {
 		width: 100dvw;
 		font-family: Serial, Impact, 'Arial Narrow', Arial, sans-serif;
@@ -71,6 +84,9 @@
 	@media only screen and (max-width: 768px) {
 		#invertedcursor {
 			display: none;
+		}
+		#articles {
+			padding-left: 0px;
 		}
 	}
 </style>
