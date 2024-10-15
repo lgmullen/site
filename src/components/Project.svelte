@@ -69,14 +69,11 @@
 		color: rgb(182, 255, 245);
 		cursor: none;
 		display: block;
-		font-family: 'Open Sans', sans-serif;
 		font-size: 16px;
 		height: 60px;
-		line-height: 25.6px;
 		margin-top: -2px;
 		text-rendering: geometricPrecision;
 		text-size-adjust: 100%;
-		unicode-bidi: isolate;
 		width: 973.273px;
 
 		&:hover .arrow-icon {
@@ -189,5 +186,15 @@
 		background-size: calc(auto 100% - 32px);
 		background-repeat: no-repeat;
 		background-position: center center;
+	}
+	@media only screen and (max-width: 768px) {
+		.grid-item {
+			flex-direction: column;
+			width: 100%;
+			height: 100px;
+		}
+		.block-content {
+			height: 64px;
+		}
 	}
 </style>

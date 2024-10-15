@@ -4,60 +4,58 @@
 </script>
 
 <div id="work">
-	<div>
-		<MediaQuery query="(min-width: 768px)" let:matches>
-			{#if matches}
-				<div class="grid-container">
-					<div class="cube-top">
-						<div class="cube-top-svg w-embed">
-							<svg viewBox="0 0 1400 218"
-								><path d="M140 0h1120l140 218H0z" fill="none" stroke="currentColor" /></svg
-							>
-						</div>
+	<MediaQuery query="" let:matches>
+		{#if matches}
+			<div class="grid-container">
+				<div class="cube-top">
+					<div class="cube-top-svg w-embed">
+						<svg viewBox="0 0 1400 218"
+							><path d="M140 0h1120l140 218H0z" fill="none" stroke="currentColor" /></svg
+						>
 					</div>
-					<Project
-						projectUrl="https://www.nytimes.com/2022/03/23/arts/design/fairchain-artists-resale-royalties.html"
-						title="Personal Website"
-						lineOne="▪ Built this personal website as an experiment with the Svelte Framework."
-						lineTwo="▪ Focused on native development in react native and Expo Go to create an app that helps
-			artists get royalties for resale."
-						tech={['Expo', 'Firebase', 'Tailwind', 'Jest', 'GraphQL', 'React', 'Typescript']}
-						year="2024"
-					/>
-					<Project
-						imageSrc="images/project-pictures/fairchain.png"
-						projectUrl="https://www.nytimes.com/2022/03/23/arts/design/fairchain-artists-resale-royalties.html"
-						title="Fairchain New York"
-						lineOne="▪ Developed a native-web MVP into a production-level quality application with ~$50,000 worth of transactions."
-						lineTwo="▪ Focused on native development in react native and Expo Go to create an app that helps
-			artists get royalties for resale."
-						tech={['Expo', 'Firebase', 'Tailwind', 'Jest', 'GraphQL', 'React', 'Typescript']}
-						year="2022"
-					/>
-					<Project
-						imageSrc="images/project-pictures/kohls-holiday.png"
-						title="Kohls Holiday Web Experience"
-						lineOne="▪ Collaborated with Kohl's design team to develop and code dynamic animations for the 2022 Kohl's digital holiday marketing campaign, generating engagement from 100,000+ users."
-						lineTwo="▪ Designed and implemented native sharing in React, enabling users to easily share their gift list animations with friends and family."
-						tech={['Expo', 'Firebase', 'Tailwind', 'Jest', 'GraphQL', 'React', 'Typescript']}
-						year="2022"
-					/>
-					<Project
-						imageSrc="images/project-pictures/tide-pools.png"
-						projectUrl="https://lgmullen.github.io/tide-pool/"
-						title="Tide Pool Table"
-						lineOne="▪ Simple react app to display ocean survey data."
-						lineTwo="▪ Uses Mapbox GL to help user visualize ocean exploration information."
-						tech={['React', 'Mui', 'React Query']}
-						year="2023"
-					/>
 				</div>
-			{/if}
-			{#if !matches}
-				<p>Constructing mobile version</p>
-			{/if}
-		</MediaQuery>
-	</div>
+				<Project
+					projectUrl="https://www.nytimes.com/2022/03/23/arts/design/fairchain-artists-resale-royalties.html"
+					title="Personal Website"
+					lineOne="▪ Built this personal website as an experiment with the Svelte Framework."
+					lineTwo="▪ Focused on native development in react native and Expo Go to create an app that helps
+			artists get royalties for resale."
+					tech={['Expo', 'Firebase', 'Tailwind', 'Jest', 'GraphQL', 'React', 'Typescript']}
+					year="2024"
+				/>
+				<Project
+					imageSrc="images/project-pictures/fairchain.png"
+					projectUrl="https://www.nytimes.com/2022/03/23/arts/design/fairchain-artists-resale-royalties.html"
+					title="Fairchain New York"
+					lineOne="▪ Developed a native-web MVP into a production-level quality application with ~$50,000 worth of transactions."
+					lineTwo="▪ Focused on native development in react native and Expo Go to create an app that helps
+			artists get royalties for resale."
+					tech={['Expo', 'Firebase', 'Tailwind', 'Jest', 'GraphQL', 'React', 'Typescript']}
+					year="2022"
+				/>
+				<Project
+					imageSrc="images/project-pictures/kohls-holiday.png"
+					title="Kohls Holiday Web Experience"
+					lineOne="▪ Collaborated with Kohl's design team to develop and code dynamic animations for the 2022 Kohl's digital holiday marketing campaign, generating engagement from 100,000+ users."
+					lineTwo="▪ Designed and implemented native sharing in React, enabling users to easily share their gift list animations with friends and family."
+					tech={['Expo', 'Firebase', 'Tailwind', 'Jest', 'GraphQL', 'React', 'Typescript']}
+					year="2022"
+				/>
+				<Project
+					imageSrc="images/project-pictures/tide-pools.png"
+					projectUrl="https://lgmullen.github.io/tide-pool/"
+					title="Tide Pool Table"
+					lineOne="▪ Simple react app to display ocean survey data."
+					lineTwo="▪ Uses Mapbox GL to help user visualize ocean exploration information."
+					tech={['React', 'Mui', 'React Query']}
+					year="2023"
+				/>
+			</div>
+		{/if}
+		{#if !matches}
+			<p>Constructing mobile version</p>
+		{/if}
+	</MediaQuery>
 </div>
 
 <style>
@@ -102,8 +100,27 @@
 		flex-direction: column;
 	}
 	@media only screen and (max-width: 768px) {
+		/* .cube-top {
+			height: auto;
+			width: 100%;
+			margin-bottom: 0px;
+		} */
+		.cube-top-svg {
+			backface-visibility: hidden;
+			box-sizing: border-box;
+			color: rgb(182, 255, 245);
+			cursor: none;
+			display: block;
+			font-family: 'Open Sans', sans-serif;
+			width: 100%;
+			height: auto;
+			margin: 0;
+		}
 		.grid-container {
 			flex-direction: column;
+			width: 100%;
+		}
+		#work {
 		}
 	}
 </style>
