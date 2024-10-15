@@ -192,12 +192,17 @@
 			width: 100%;
 			height: 100%;
 			border: 2px solid green;
-			flex: 5;
+			padding: 0;
+			margin: 0;
 		}
 		.contact-table {
 			background: black;
-
-			width: calc(100% - 32px);
+			width: calc(100%);
+			padding: 0;
 		}
+		#third {
+			display: none;
+		}
+		//
 	}
 </style>
