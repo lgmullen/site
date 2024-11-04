@@ -6,7 +6,7 @@
 	<div id="third"><p id="contact-text">CONTACT</p></div>
 	<div class="image-container">
 		<div class="contact-table-container">
-			<div class="test">
+			<div class="border-panel">
 				<div class="sunken-panel contact-table">
 					<table class="interactive" style="width: 100%; height: 100%">
 						<thead>
@@ -136,13 +136,13 @@
 		width: 50%;
 		height: 100%;
 	}
-	.test {
+	.border-panel {
 		display: flex;
 		flex: 1;
 		padding: 16px;
 		background: hsla(253, 4%, 50%, 0.527);
 		backdrop-filter: opacity(20%);
-		width: '100%';
+		width: 100vw;
 	}
 	.contact-table {
 		background: black;
@@ -177,7 +177,12 @@
 	#email:hover {
 		background-color: orangered;
 	}
+
 	@media only screen and (max-width: 768px) {
+		.border-panel {
+			padding: 0;
+		}
+
 		#contact-text {
 			font-size: 1rem;
 			color: white;
