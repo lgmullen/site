@@ -169,5 +169,8 @@
 			flex-direction: column;
 			border-bottom: 1px solid white;
 		}
+		#container2 {
+			display: none;
+		}
 	}
 </style>
