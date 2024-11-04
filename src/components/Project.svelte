@@ -191,10 +191,21 @@
 		.grid-item {
 			flex-direction: column;
 			width: 100%;
-			height: 100px;
+			min-height: 100px;
 		}
 		.block-content {
-			height: 64px;
+			min-height: 64px;
+			height: 100%;
+		}
+		.block-title-wrapper {
+			height: 100%;
+		}
+		.block-item {
+			display: flex;
+			flex-direction: row;
+			padding: 0;
+			margin: 0;
+			height: 100%;
 		}
 	}
 </style>
