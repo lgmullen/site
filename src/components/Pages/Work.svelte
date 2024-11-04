@@ -76,14 +76,8 @@
 		color: rgb(182, 255, 245);
 		cursor: none;
 		display: block;
-		font-family: 'Open Sans', sans-serif;
-		height: 135.945px;
-		max-width: 1150px;
 		stroke-width: 2px;
 		width: 100%;
-		-webkit-font-smoothing: antialiased;
-		-webkit-tap-highlight-color: transparent;
-		margin-bottom: 16px;
 	}
 	#work {
 		display: flex;
@@ -100,18 +94,12 @@
 		flex-direction: column;
 	}
 	@media only screen and (max-width: 768px) {
-		/* .cube-top {
-			height: auto;
-			width: 100%;
-			margin-bottom: 0px;
-		} */
 		.cube-top-svg {
 			backface-visibility: hidden;
 			box-sizing: border-box;
 			color: rgb(182, 255, 245);
 			cursor: none;
 			display: block;
-			font-family: 'Open Sans', sans-serif;
 			width: 100%;
 			height: auto;
 			margin: 0;
@@ -121,6 +109,7 @@
 			width: 100%;
 		}
 		#work {
+			padding: 4px;
 		}
 	}
 </style>

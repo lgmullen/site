@@ -88,5 +88,9 @@
 		#articles {
 			padding-left: 0px;
 		}
+		.noise {
+			width: 100dvw;
+			height: 100dvh;
+		}
 	}
 </style>

@@ -15,10 +15,10 @@
 		<div id="container1">
 			<div class="marquee">
 				<div class="marquee-content">
-					<h2 style="font-size:4rem">TYPESCRIPT / REACT / SVELTE / PYTHON / JAVASCRIPT</h2>
+					<h2>TYPESCRIPT / REACT / SVELTE / PYTHON / JAVASCRIPT /&nbsp;</h2>
 				</div>
 				<div class="marquee-content">
-					<h2 style="font-size:4rem">TYPESCRIPT / REACT / SVELTE / PYTHON / JAVASCRIPT</h2>
+					<h2>TYPESCRIPT / REACT / SVELTE / PYTHON / JAVASCRIPT /&nbsp;</h2>
 				</div>
 			</div>
 		</div>
@@ -104,6 +104,7 @@
 		color: #333;
 		display: flex;
 		margin-top: 20px;
+		margin-bottom: 20px;
 	}
 
 	.marquee-content {
@@ -113,6 +114,7 @@
 		gap: var(--gap);
 		min-width: 100%;
 		animation: scroll 20s linear infinite;
+		font-size: 4rem;
 	}
 	.marquee:hover .marquee-content {
 		animation-play-state: paused;
@@ -144,13 +146,11 @@
 			font-size: 1.5rem;
 			color: rgb(39, 182, 0);
 		}
-		.marquee {
-			height: 100px;
-			overflow: hidden;
-			position: relative;
-			background: #20be00;
-			color: #333;
-			display: flex;
+		.marquee-content {
+			gap: var(--gap);
+			min-width: 100%;
+			animation: scroll 20s linear infinite;
+			font-size: 4rem;
 		}
 		#container {
 			display: flex;

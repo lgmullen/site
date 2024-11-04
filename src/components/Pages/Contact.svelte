@@ -191,7 +191,6 @@
 			background: black;
 			width: 100%;
 			height: 100%;
-			border: 2px solid green;
 			padding: 0;
 			margin: 0;
 		}
@@ -203,6 +202,5 @@
 		#third {
 			display: none;
 		}
-		//
 	}
 </style>
