@@ -15,6 +15,22 @@
 					</div>
 				</div>
 				<Project
+					projectUrl="https://chipper-boba-e51703.netlify.app/"
+					title="Tic Tac Toe React Native App"
+					lineOne="▪ Tic Tac Toe App built in React Native. Features CPU with heuristic algorithm."
+					lineTwo="▪ Click here to play!."
+					tech={['Expo', 'React Native', 'HTML', 'CSS', 'Typescript']}
+					year="2025"
+				/>
+				<Project
+					projectUrl="https://github.com/lgmullen/eliza-bot"
+					title="Eliza AI Chatbot"
+					lineOne="▪ Built an emulation of the 1960s MIT natural language processing computer program with openAI."
+					lineTwo=""
+					tech={['React', 'Next.Js', 'OpenAi', 'API', 'Typescript']}
+					year="2025"
+				/>
+				<Project
 					projectUrl="https://www.nytimes.com/2022/03/23/arts/design/fairchain-artists-resale-royalties.html"
 					title="Personal Website"
 					lineOne="▪ Built this personal website as an experiment with the Svelte Framework."
